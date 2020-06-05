@@ -27,12 +27,13 @@ function Header(){
     const headerHOne=document.createElement('h1')
     const headerSpanTemp=document.createElement('span')
     //debugger
-   
     
-    headerDiv.appendChild(headerContainer)
-    headerSpan.appendChild(headerDiv)
-    headerHOne.appendChild(headerDiv)
-    headerSpanTemp.appendChild(headerDiv)
+    headerContainer.appendChild(headerDiv)
+    headerDiv.appendChild(headerHOne)
+    
+    headerDiv.appendChild(headerSpan)
+    headerDiv.appendChild(headerHOne)
+    headerDiv.appendChild(headerSpanTemp)
     // debugger
     //console.log('I am inside the function')
 
@@ -48,4 +49,14 @@ function Header(){
     return Header
 }
 Header()
+
+// //testing appending and createElement process
+// const tabsOne=document.querySelector('.tabs')
+// tabsOne.textContent='Hello'
+
+// const  tabsR=document.createElement('h2')
+// const  tabsR2=document.createElement('h3')
+
+// tabsOne.appendChild(tabsR)
+// tabsR.appendChild(tabsR2)
 

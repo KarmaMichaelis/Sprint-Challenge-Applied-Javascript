@@ -10,8 +10,8 @@
 
 axios.get('https://lambda-times-backend.herokuapp.com/topics')
 .then(response=>{
-    console.log(response)
+    console.log('this is the axios:',response)
 })
 .catch(error=>{
-    console.log ('This is an error message',error)
+    console.log ('This is an error message:',error)
 })
