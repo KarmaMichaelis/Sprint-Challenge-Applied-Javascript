@@ -1,3 +1,5 @@
+
+
 // STEP 1: Create a Header component.
 // -----------------------
 // Write a function that returns the markup you see below:
@@ -11,10 +13,27 @@
 // Use your function to create a header
 // and append it to the DOM inside the div.header-container
 const headerContainer=document.querySelector('.header-container')
+//debugger
 
-function Header() {
+function Header(headerData){
+    //debugger
     const headerDiv=document.createElement('div')
     const headerSpan=document.createElement('span')
     const headerHOne=document.createElement('h1')
     const headerSpanTemp=document.createElement('span')
+    //debugger
+    headerDiv.appendChild(headerContainer)
+    headerSpan.appendChild(headerDiv)
+    headerHOne.appendChild(headerDiv)
+    headerSpanTemp.appendChild(headerDiv)
+    // debugger
+    console.log('I am inside the function')
+
+    headerDiv.classList.add('header')
+    headerSpan.classList.add('date')
+    headerSpanTemp.classList.add('temp')
+    
+
+    //return Header
 }
+Header()
