@@ -12,19 +12,23 @@
 //
 // Use your function to create a header
 // and append it to the DOM inside the div.header-container
+
 const headerContainer=document.querySelector('.header-container')
 //debugger
 
 
 
-function Header(headerData){
+function Header(){
     //debugger
-
+    
+    
     const headerDiv=document.createElement('div')
     const headerSpan=document.createElement('span')
     const headerHOne=document.createElement('h1')
     const headerSpanTemp=document.createElement('span')
     //debugger
+   
+    
     headerDiv.appendChild(headerContainer)
     headerSpan.appendChild(headerDiv)
     headerHOne.appendChild(headerDiv)
@@ -40,7 +44,7 @@ function Header(headerData){
     headerHOne.textContent='Lambda Times'
     headerSpanTemp.textContent='98deg'
     
-
+    
     return Header
 }
 Header()
