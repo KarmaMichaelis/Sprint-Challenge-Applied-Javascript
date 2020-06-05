@@ -15,8 +15,11 @@
 const headerContainer=document.querySelector('.header-container')
 //debugger
 
+
+
 function Header(headerData){
     //debugger
+
     const headerDiv=document.createElement('div')
     const headerSpan=document.createElement('span')
     const headerHOne=document.createElement('h1')
@@ -27,13 +30,18 @@ function Header(headerData){
     headerHOne.appendChild(headerDiv)
     headerSpanTemp.appendChild(headerDiv)
     // debugger
-    console.log('I am inside the function')
+    //console.log('I am inside the function')
 
     headerDiv.classList.add('header')
     headerSpan.classList.add('date')
     headerSpanTemp.classList.add('temp')
+
+    headerSpan.textContent='SMARCH 28,2019'
+    headerHOne.textContent='Lambda Times'
+    headerSpanTemp.textContent='98deg'
     
 
-    //return Header
+    return Header
 }
 Header()
+
