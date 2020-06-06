@@ -41,6 +41,8 @@ an event listner is a method that allows us to add different types of events to 
 
 4. Why would we convert a NodeList into an Array?
 
+We would convert it if wewanted to ise array methods like .map or .forEach.
+
 5. What is a component?
 
 It is a group of reusable data/code inside of HTML, CSS, or JavaScript
