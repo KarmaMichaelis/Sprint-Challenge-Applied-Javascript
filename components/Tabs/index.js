@@ -10,17 +10,7 @@
 
 const tabContainer=document.querySelector('.topics')
 
-// axios.get('https://lambda-times-backend.herokuapp.com/topics')
-// .then(response=>{
-//     // console.log('this is the axios:',response)
-//     const tabDiv=document.createElement('div')
-//     tabContainer.appendChild(tabDiv)
-//     tabDiv.classList.add('tab')
-//     tabDiv.textContent='Topic Here'
-// })
-// .catch(error=>{
-//     console.log ('This is an error message:',error)
-// })
+
 function getTabs(){
     axios.get('https://lambda-times-backend.herokuapp.com/topics')
 .then(response=>{
@@ -36,3 +26,11 @@ function getTabs(){
 return getTabs
 }
 getTabs()
+
+//come back to for loop
+for(let i=0;i<getTabs.length;i++){
+//    const tabDiv=getTabs([i])
+//    tabContainer.appendChild(tabDiv)
+   tabContainer[i]
+
+}
