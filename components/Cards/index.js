@@ -18,3 +18,16 @@
 // </div>
 //
 // Use your function to create a card for each of the articles and add the card to the DOM.
+
+//come back and figure out if http is different from axios
+function getCards(){
+    axios.get('https://lambda-times-backend.herokuapp.com/articles')
+    .then(response=>{
+        console.log('this is the axios',response)
+    })
+    .catch(error=>{
+        console.log('this code those not work',error)
+    })
+    return getCards
+}
+getCards()
