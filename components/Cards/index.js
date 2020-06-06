@@ -25,13 +25,27 @@ const cardsContainer=document.querySelector('.cards-container')
 function getCards(attributes){
     axios.get('https://lambda-times-backend.herokuapp.com/articles')
     .then(response=>{
-        const {article,author}=attributes
+        
         const cardDiv=document.createElement('div')
         const cardHead=document.createElement('div')
         const cardAuthor=document.createElement('div')
         const cardImgContainer=document.createElement('div')
         const cardImg=document.createElement('img')
         const cardSpan=document.createElement('span')
+
+        cardsContainer.appendChild(cardDiv)
+        cardDiv.appendChild(cardHead)
+        cardHead.appendChild(cardAuthor)
+        cardAuthor.appendChild(cardImgContainer)
+        cardImgContainer.appendChild(cardImg)
+        cardImgContainer.appendChild(cardSpan)
+
+        cardDiv.classList.add('card')
+        cardHead.classList.add('headline')
+        cardAuthor.classList.add('author')
+        cardImgContainer.classList.add('img-container')
+
+
     })
     .catch(error=>{
         console.log('this code those not work',error)
