@@ -30,13 +30,20 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. What is the DOM?
 
+DOM stands for Document Object Model. It repersents the HTML elements of a webpage, but also allows us to interact with the elements.
+
 2. What is an event?
+An event is there interaction between a user and the webpage.
 
 3. What is an event listener?
+
+an event listner is a method that allows us to add different types of events to the elements.
 
 4. Why would we convert a NodeList into an Array?
 
 5. What is a component?
+
+It is a group of reusable data/code inside of HTML, CSS, or JavaScript
 
 ### Git Set up
 
