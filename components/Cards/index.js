@@ -25,7 +25,7 @@ const cardsContainer=document.querySelector('.cards-container')
 function getCards(attributes){
     axios.get('https://lambda-times-backend.herokuapp.com/articles')
     .then(response=>{
-        
+
         const cardDiv=document.createElement('div')
         const cardHead=document.createElement('div')
         const cardAuthor=document.createElement('div')
@@ -44,6 +44,13 @@ function getCards(attributes){
         cardHead.classList.add('headline')
         cardAuthor.classList.add('author')
         cardImgContainer.classList.add('img-container')
+
+       
+        cardHead.textContent=`article goes here`
+
+        //add img url/src here
+
+         cardSpan.textContent=`By (author name goes here)`
 
 
     })
