@@ -18,3 +18,45 @@
 // </div>
 //
 // Use your function to create a card for each of the articles and add the card to the DOM.
+
+const cardsContainer=document.querySelector('.cards-container')
+
+//come back and figure out if http is different from axios
+function getCards(attributes){
+    axios.get('https://lambda-times-backend.herokuapp.com/articles')
+    .then(response=>{
+
+        const cardDiv=document.createElement('div')
+        const cardHead=document.createElement('div')
+        const cardAuthor=document.createElement('div')
+        const cardImgContainer=document.createElement('div')
+        const cardImg=document.createElement('img')
+        const cardSpan=document.createElement('span')
+
+        cardsContainer.appendChild(cardDiv)
+        cardDiv.appendChild(cardHead)
+        cardHead.appendChild(cardAuthor)
+        cardAuthor.appendChild(cardImgContainer)
+        cardImgContainer.appendChild(cardImg)
+        cardImgContainer.appendChild(cardSpan)
+
+        cardDiv.classList.add('card')
+        cardHead.classList.add('headline')
+        cardAuthor.classList.add('author')
+        cardImgContainer.classList.add('img-container')
+
+       
+        cardHead.textContent=`article goes here`
+
+        //add img url/src here
+
+         cardSpan.textContent=`By (author name goes here)`
+
+
+    })
+    .catch(error=>{
+        console.log('this code those not work',error)
+    })
+    return getCards
+}
+getCards()
